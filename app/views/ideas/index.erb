@@ -1,21 +1,20 @@
 <h1>Ideas</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="2"></th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col" colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
   <% @ideas.each do |idea| %>
-    <tr>
       <td><%= idea.name %></td>
       <td><%= idea.description %></td>
-      <td><a href="/ideas/<%= idea.id %>/edit">Edit</a></td>
-      <td><a href="/ideas/<%= idea.id %>">Show</a></td>
+      <td><a href="/ideas/<%= idea.id %>/edit" class="btn btn-warning">Edit</a></td>
+      <td><a href="/ideas/<%= idea.id %>" class="btn btn-secondary">Show</a></td>
     </tr>
   <% end %>
   </tbody>
