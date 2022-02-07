@@ -1,0 +1,12 @@
+<h1><%=@title %></h1>
+<form action="/ideas" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+    <label for="idea_name">Name:</label>
+    <input id="idea_name" name="idea[name]" type="text" class="form-control" value="<%= @idea.name %>" />
+    </div>
+    <div class="form-group">
+    <label for="idea_description">Description:</label>
+    <textarea id="idea_description" name="idea[description]" rows="5" class="form-control"><%= @idea.description %></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
